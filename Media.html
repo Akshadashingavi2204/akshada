@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ****************************************************************************** */
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-color: orangered;
+            float: left;
+        }
+
+        /* ******************************************************************************* */
+        .header_1 {
+            height: 90px;
+            width: 30%;
+            /* background-color: aqua; */
+            float: left;
+        }
+
+        /* ********************************************************************************** */
+        .header_2 {
+            height: 90px;
+            width: 70%;
+            /* background-color: brown; */
+            float: left;
+        }
+
+        /* ******************************************************************************** */
+        .header_1 h1 {
+            margin-left: 40px;
+            margin-top: 25px;
+            color: darkblue;
+        }
+
+        .header_section {
+            height: 50px;
+            width: 115px;
+            background-color: black;
+            float: left;
+            margin-top: 18px;
+            margin-left: 30px;
+            border-radius: 13px;
+        }
+
+        .header_section p {
+            color: white;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* ********************************************************************************** */
+        .section_1 {
+            height: 509px;
+            width: 20%;
+            /* background-color: aqua; */
+            float: left;
+        }
+
+        .sub_section {
+            height: 50px;
+            width: 160px;
+            background-color: black;
+            float: left;
+            margin-top: 30px;
+            margin-left: 40px;
+            border-radius: 30px;
+        }
+
+        .sub_section p {
+            color: white;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* ********************************************************************************** */
+        .hero_section {
+            height: 509px;
+            width: 80%;
+            background-color: white;
+            float: left;
+        }
+
+        /* ********************************************************************************** */
+        .section_2 {
+            height: 50px;
+            width: 100%;
+            /* background-color: aqua; */
+            float: left;
+            padding: 5px;
+        }
+
+        .section_2_part_1 {
+            height: 50px;
+            width: 20%;
+            background-color: red;
+            float: left;
+        }
+
+        .section_2_part_1 p {
+            color: white;
+            margin-left: 25px;
+            line-height: 45px;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+
+        .section_2_part_2 {
+            height: 50px;
+            width: 80%;
+            background-color: black;
+            float: left;
+        }
+
+        .section_2_part_2 p {
+            color: white;
+            line-height: 50px;
+            font-size: large;
+        }
+
+        /* ********************************************************************************** */
+
+        .section_3 {
+            height: 449px;
+            width: 70%;
+            /* background-color: blue; */
+            float: left;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        .section_3_part_1,
+        .section_3_part_2,
+        .section_3_part_3,
+        .section_3_part_4,
+        .section_3_part_5,
+        .section_3_part_6 {
+            height: 224px;
+            width: 251px;
+            /* background-color: blueviolet; */
+            float: left;
+            border: solid 2px black;
+        }
+
+        .section_3_part_1 img {
+            height: 85px;
+            width: 140px;
+            margin-left: 45px;
+            margin-top: 50px;
+        }
+
+        .section_3_part_2 img {
+            height: 85px;
+            width: 120px;
+            margin-left: 60px;
+            margin-top: 40px;
+        }
+
+        .section_3_part_3 img {
+            height: 85px;
+            width: 170px;
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+
+        .section_3_part_4 img {
+            height: 85px;
+            width: 160px;
+            margin-left: 40px;
+            margin-top: 50px;
+        }
+
+        .section_3_part_5 img {
+            height: 55px;
+            width: 120px;
+            margin-left: 55px;
+            margin-top: 70px;
+        }
+
+        .section_3_part_6 img {
+            height: 60px;
+            width: 130px;
+            margin-left: 55px;
+            margin-top: 60px;
+        }
+
+        .section_3_part_1 p,
+        .section_3_part_3 p,
+        .section_3_part_4 p {
+            text-align: center;
+            line-height: 55px;
+            margin-right: 5px;
+            font-size: large;
+        }
+
+        .section_3_part_2 p,
+        .section_3_part_5 p,
+        .section_3_part_6 p {
+            text-align: center;
+            line-height: 81px;
+            margin-right: 12px;
+            font-size: large;
+        }
+
+        /* ********************************************************************************** */
+        .section_4 {
+            height: 449px;
+            width: 29%;
+            background-color: gray;
+            float: left;
+            margin-top: 10px;
+            margin-left: 1px;
+        }
+
+        .section_4 p {
+            text-align: center;
+            color: yellow;
+            font-size: xx-large;
+            font-weight: 600;
+            margin-top: 90px;
+            /* background-color: aqua; */
+        }
+
+        .section_4 form {
+            list-style-type: none;
+            margin-left: 80px;
+            margin-top: 40px;
+            font-size: large;
+        }
+
+        .section_4 button {
+            height: 30px;
+            width: 90px;
+            text-align: center;
+            border-radius: 40px;
+            padding: 10px auto;
+            margin-left: 27px;
+            margin-top: 15px;
+            border: solid 1px black;
+        }
+
+        /* ********************************************************************************** */
+        .container_sub {
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+            float: left;
+        }
+
+        /* ********************************************************************************** */
+        .section_5 {
+            margin-top: 50px;
+            border: solid 1px black;
+            margin-left: 200px;
+        }
+
+        /* ********************************************************************************** */
+        .section_6 p {
+            text-align: center;
+            font-size: x-large;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* ********************************************************************************** */
+        .section_7 {
+            margin-top: 10px;
+            border: solid 1px black;
+            margin-left: 200px;
+        }
+
+        /* ********************************************************************************** */
+        /* Section_8 google map */
+
+        .section_8 {
+            height: 60%;
+            width: 60%;
+            /* background-color: peru; */
+            float: left;
+        }
+
+        .section_8 iframe{
+            height: 300px;
+            width: 450px;
+            margin-left: 260px;
+            margin-top: 60px;
+            border-radius: 50px;
+        }
+
+        /* ********************************************************************************** */
+
+        .section_9 {
+            height: 60%;
+            width: 40%;
+            /* background-color: purple; */
+            float: left;
+            padding: 80px;
+        }
+
+        .section_9 p {
+            font-size: medium;
+            font-weight: 900;
+            margin-top: 25px;
+            margin-left: 40px;
+        }
+
+        .line {
+            width: 330px;
+            margin-top: 10px;
+            margin-left: 40px;
+            border: solid 1px gray;
+        }
+
+        /* ********************************************************************************** */
+        .section_10 {
+            height: 80px;
+            width: 90%;
+            background-color: black;
+            float: left;
+            margin-top: 80px;
+            margin-left: 135px;
+        }
+
+        .section_10 p {
+            text-align: center;
+            color: white;
+            margin-top: 25px;
+        }
+
+        /* ********************************************************************************** */
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+            <header>
+                <div class="header_1">
+                    <h1>Cloud Media Portal</h1>
+                </div>
+                <div class="header_2">
+                    <div class="header_section">
+                        <p>LOKMAT</p>
+                    </div>
+                    <div class="header_section">
+                        <p>SAMANA</p>
+                    </div>
+                    <div class="header_section">
+                        <p>SAKAL</p>
+                    </div>
+                    <div class="header_section">
+                        <p>LOKSATTA</p>
+                    </div>
+                    <div class="header_section">
+                        <p>MHTIMES</p>
+                    </div>
+                    <div class="header_section">
+                        <p>ZUNJAR NETA</p>
+                    </div>
+                </div>
+
+            </header>
+            <!-- **************************************************************** -->
+            <section>
+                <div class="section_1">
+                    <div class="sub_section">
+                        <p>LOKMAT</p>
+                    </div>
+                    <div class="sub_section">
+                        <p>SAMANA</p>
+                    </div>
+                    <div class="sub_section">
+                        <p>SAKAL</p>
+                    </div>
+                    <div class="sub_section">
+                        <p>LOKSATTA</p>
+                    </div>
+                    <div class="sub_section">
+                        <p>MHTIMES</p>
+                    </div>
+                    <div class="sub_section">
+                        <p>ZUNJAR NETA</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- **************************************************************** -->
+            <!--  hero section starts -->
+            <section>
+                <div class="hero_section">
+
+                    <div class="section_2">
+                        <div class="section_2_part_1">
+                            <p>Notice:</p>
+                        </div>
+                        <div class="section_2_part_2">
+                            <marquee behavior="scroll" direction="left">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, omnis.</p>
+                            </marquee>
+                        </div>
+                    </div>
+
+                    <div class="section_3">
+                        <div class="section_3_part_1">
+                            <img src="../Media_Portal/assets/SakalHeader.avif" alt="sakal image">
+                            <a href="https://epaper.esakal.com/smartepaper/UI/" target="_blank">
+                                <p>Visit here</p>
+                            </a>
+                        </div>
+                        <div class="section_3_part_2">
+                            <img src="../Media_Portal/assets/lokmat-logo.png" alt="lokmat image">
+                            <a href="https://www.lokmat.com/" target="_blank">
+                                <p>Visit here</p>
+                            </a>
+                        </div>
+                        <div class="section_3_part_3">
+                            <img src="../Media_Portal/assets/loksatta.svg" alt="loksatta image">
+                            <a href="https://www.loksatta.com/" target="_blank">
+                                <p>Visit here</p>
+                            </a>
+                        </div>
+                        <div class="section_3_part_4">
+                            <img src="../Media_Portal/assets/saamna.png" alt="saamna image">
+                            <a href="https://www.saamana.com/" target="_blank">
+                                <p>Visit here</p>
+                            </a>
+                        </div>
+                        <div class="section_3_part_5">
+                            <img src="../Media_Portal/assets/maharashtra-times.webp" alt="mtimes image">
+                            <a href="https://marathi.indiatimes.com/" target="_blank">
+                                <p>Visit here</p>
+                            </a>
+                        </div>
+                        <div class="section_3_part_6">
+                            <img src="../Media_Portal/assets/zunjar-log.png" alt="zunjar neta">
+                            <a href="https://zunjarneta.com/" target="_blank">
+                                <p>Visit here</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="section_4">
+                        <p>Join now</p>
+                        <form action="" method="get" enctype="multipart/form-data">
+                            <!-- name -->
+                            <label for="">Name:</label><br>
+                            <input type="text" name="user_name" id="user_name" required placeholder="enter your name">
+                            <br><br>
+
+                            <!-- email -->
+                            <label for="">Mail:</label><br>
+                            <input type="email" name="user_email" id="user_email" required
+                                placeholder="enter your email">
+                            <br><br>
+
+                            <!-- Mobile no -->
+                            <label for="">Mobile No:</label><br>
+                            <input type="number" name="user_number" id="user_number" required
+                                placeholder="enter your mobile no">
+                            <br><br>
+
+                            <!-- button -->
+                            <button type="submit" value="submit form">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+            <!-- hero section ends -->
+            <!-- ***************************************************************************** -->
+
+        </div>
+    </main>
+    <!--  container 1 ends -->
+    <!-- ***************************************************************************** -->
+    <div class="container_sub">
+        <div class="section_5"></div>
+        <div class="section_6">
+            <p>CONTACT US</p>
+        </div>
+        <div class="section_7"></div>
+
+        <!-- ***************************************************************************** -->
+        <div class="section_8">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.7094898974!2d73.69780873682559!3d18.524870314028224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1740327948972!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" frameborder="0">
+            </iframe>
+        </div>
+        <!-- ***************************************************************************** -->
+        <div class="section_9">
+            <p><span style="color: red; font-size: large; font-weight: bold;">EMAIL:-</span> abc@gmail.com
+            <div class="line"></div>
+            </p>
+            <p><span style="color: red; font-size: large; font-weight: bold;">MOBILE NO:-</span> XXXXX-XXXXX
+            <div class="line"></div>
+            </p>
+            <p><span style="color: red; font-size: large; font-weight: bold;">ADDRESS:-</span> Pune,Maharashtra,India
+            <div class="line"></div>
+            </p>
+        </div>
+        <!-- ***************************************************************************** -->
+        <marquee behavior="scroll" direction="left" scrollamount=20>
+            <div class="section_10">
+                <center>
+                    <p>Copyright@ 2024-25 media portal,L.L.C.All rights reserved.various Trademarks held by their
+                        respective
+                        owner <br>Terms & Condition
+                    </p>
+                </center>
+            </div>
+        </marquee>
+        <!-- ****************************************************************************** -->
+        <!--  container sub ends -->
+    </div>
+
+</body>
+
+</html>
